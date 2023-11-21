@@ -28,6 +28,7 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+//query string (name/value pairs) is sent in the URL ofa GET request:
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -36,6 +37,7 @@ const getNotes = () =>
     }
   });
 
+//HTTP POST method sends data to the server.
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -45,6 +47,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note)
   });
 
+//HTTP DELETE request method deletes the specified resource.
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
