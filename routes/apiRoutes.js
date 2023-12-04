@@ -25,9 +25,13 @@ router.post('/notes', async(req, res) =>{
     res.json(parsedData);
 })
 
-router.delete('/notes', (req, res) =>{
+router.delete('/notes', async(req, res) =>{
     res.json('success delete');
 })
+
+// router.delete('/notes', (req, res) =>{
+//     res.json('success delete');
+// })
 
 
 module.exports = router;
